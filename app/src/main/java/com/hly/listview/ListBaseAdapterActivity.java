@@ -35,6 +35,12 @@ public class ListBaseAdapterActivity extends AppCompatActivity {
         listView.setDivider(new ColorDrawable(Color.RED));
         // 设置分割线的宽度
         listView.setDividerHeight(5);
+        // 添加头部文件
+        View headView = getLayoutInflater().inflate(R.layout.list_layout_header, null);
+        listView.addHeaderView(headView);
+        // 添加尾部文件
+        View footView = getLayoutInflater().inflate(R.layout.list_layout_foot, null);
+        listView.addFooterView(footView);
 
         listView.setAdapter(adapter);
 
