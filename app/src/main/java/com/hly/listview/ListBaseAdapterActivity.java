@@ -7,7 +7,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,6 +42,8 @@ public class ListBaseAdapterActivity extends AppCompatActivity {
         listView.addFooterView(footView);
 
         listView.setAdapter(adapter);
+
+
 
     }
 }

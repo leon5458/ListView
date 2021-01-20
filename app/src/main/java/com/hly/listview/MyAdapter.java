@@ -3,6 +3,7 @@ package com.hly.listview;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MyAdapter extends BaseAdapter {
-    private List<ListBean> mDatas = null;
-    private Context mContext = null;
+    private List<ListBean> mDatas;
+    private Context mContext;
 
     public MyAdapter(Context context, List<ListBean> datas) {
         mDatas = datas;
@@ -62,12 +63,11 @@ public class MyAdapter extends BaseAdapter {
         holder.title.setText(mDatas.get(position).getTitle());
         holder.content.setText(mDatas.get(position).getContent());
         holder.delete.setText(mDatas.get(position).getDelete());
-
         return convertView;
 
     }
 
-    public final class ViewHolder {
+    public static class ViewHolder {
         ImageView image;
         TextView title;
         TextView content;
