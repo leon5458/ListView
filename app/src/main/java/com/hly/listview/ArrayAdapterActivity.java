@@ -1,6 +1,7 @@
 package com.hly.listview;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import android.graphics.Color;
@@ -34,14 +35,16 @@ public class ArrayAdapterActivity extends AppCompatActivity {
         //        listView.setAdapter(adapter);
 
         List<String> list = new ArrayList<>();
-        for (int i = 0; i < 15; i++) {
-            list.add("ArrayAdapter 使用自定义布局");
-        }
+        list.addAll(Arrays.asList(data));
+
+
 
         // adapter设置中布局设定为我们自定义的
-        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.simple_single_item);
+        final ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>(this, R.layout.simple_single_item);
         adapter.addAll(list);
         listView.setAdapter(adapter);
+
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

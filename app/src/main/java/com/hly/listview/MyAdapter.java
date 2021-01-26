@@ -42,7 +42,7 @@ public class MyAdapter extends BaseAdapter {
         ViewHolder holder;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.list_base_item, null);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.list_base_layout, null);
             holder.image = convertView.findViewById(R.id.image);
             holder.title = convertView.findViewById(R.id.title);
             holder.content = convertView.findViewById(R.id.content);
